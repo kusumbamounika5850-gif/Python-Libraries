@@ -1,1 +1,275 @@
 # Python-Libraries
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>NumPy Python Library Notes</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        background-color: #f9f9f9;
+        padding: 20px;
+        color: #333;
+    }
+    h1, h2, h3 {
+        color: #2c3e50;
+    }
+    code, pre {
+        background: #272822;
+        color: #f8f8f2;
+        padding: 10px;
+        display: block;
+        border-radius: 5px;
+        overflow-x: auto;
+    }
+    .output {
+        background: #ecf0f1;
+        color: #000;
+        padding: 10px;
+        border-left: 5px solid #2ecc71;
+        margin-bottom: 20px;
+        white-space: pre;
+    }
+</style>
+</head>
+
+<body>
+
+<h1>📦 NumPy (Numerical Python)</h1>
+<p><b>NumPy</b> is a Python library used for numerical computing and multi-dimensional arrays.</p>
+
+<pre><code>import numpy as np</code></pre>
+
+<hr>
+
+<h2>🧱 NumPy Array</h2>
+
+<h3>🔹 array()</h3>
+<p>Creates a NumPy array from a list or tuple.</p>
+
+<pre><code>a = np.array([1, 2, 3, 4])
+print(a)</code></pre>
+
+<div class="output">
+[1 2 3 4]
+</div>
+
+<hr>
+
+<h2>🔢 Array Creation Functions</h2>
+
+<h3>🔹 arange()</h3>
+
+<pre><code>a = np.arange(1, 10, 2)
+print(a)</code></pre>
+
+<div class="output">
+[1 3 5 7 9]
+</div>
+
+<h3>🔹 zeros()</h3>
+
+<pre><code>z = np.zeros((2, 3))
+print(z)</code></pre>
+
+<div class="output">
+[[0. 0. 0.]
+ [0. 0. 0.]]
+</div>
+
+<h3>🔹 ones()</h3>
+
+<pre><code>o = np.ones((3, 2))
+print(o)</code></pre>
+
+<div class="output">
+[[1. 1.]
+ [1. 1.]
+ [1. 1.]]
+</div>
+
+<h3>🔹 fill() / full()</h3>
+
+<pre><code>f = np.full((2, 2), 7)
+print(f)</code></pre>
+
+<div class="output">
+[[7 7]
+ [7 7]]
+</div>
+
+<h3>🔹 eye()</h3>
+
+<pre><code>i = np.eye(3)
+print(i)</code></pre>
+
+<div class="output">
+[[1. 0. 0.]
+ [0. 1. 0.]
+ [0. 0. 1.]]
+</div>
+
+<hr>
+
+<h2>📐 Array Properties</h2>
+
+<h3>🔹 ndim</h3>
+
+<pre><code>a = np.array([[1,2,3],[4,5,6]])
+print(a.ndim)</code></pre>
+
+<div class="output">2</div>
+
+<h3>🔹 shape</h3>
+
+<pre><code>print(a.shape)</code></pre>
+
+<div class="output">(2, 3)</div>
+
+<h3>🔹 size</h3>
+
+<pre><code>print(a.size)</code></pre>
+
+<div class="output">6</div>
+
+<hr>
+
+<h2>🔄 Reshape</h2>
+
+<h3>🔹 reshape()</h3>
+
+<pre><code>a = np.arange(6)
+print(a.reshape(2,3))</code></pre>
+
+<div class="output">
+[[0 1 2]
+ [3 4 5]]
+</div>
+
+<h3>🔹 reshape(-1,1)</h3>
+
+<pre><code>a = np.array([1,2,3,4])
+print(a.reshape(-1,1))</code></pre>
+
+<div class="output">
+[[1]
+ [2]
+ [3]
+ [4]]
+</div>
+
+<h3>🔹 reshape(1,-1)</h3>
+
+<pre><code>print(a.reshape(1,-1))</code></pre>
+
+<div class="output">
+[[1 2 3 4]]
+</div>
+
+<hr>
+
+<h2>🔃 Array Operations</h2>
+
+<h3>🔹 ravel()</h3>
+
+<pre><code>a = np.array([[1,2],[3,4]])
+print(a.ravel())</code></pre>
+
+<div class="output">
+[1 2 3 4]
+</div>
+
+<h3>🔹 transpose()</h3>
+
+<pre><code>print(a.transpose())</code></pre>
+
+<div class="output">
+[[1 3]
+ [2 4]]
+</div>
+
+<h3>🔹 diagonal()</h3>
+
+<pre><code>a = np.array([[1,2,3],[4,5,6],[7,8,9]])
+print(a.diagonal())</code></pre>
+
+<div class="output">
+[1 5 9]
+</div>
+
+<h3>🔹 concatenate()</h3>
+
+<pre><code>a = np.array([1,2])
+b = np.array([3,4])
+print(np.concatenate((a,b)))</code></pre>
+
+<div class="output">
+[1 2 3 4]
+</div>
+
+<hr>
+
+<h2>🎲 Random Functions</h2>
+
+<h3>🔹 randint()</h3>
+
+<pre><code>print(np.random.randint(1, 10, 5))</code></pre>
+
+<div class="output">
+[3 7 1 9 5]
+</div>
+
+<h3>🔹 randn()</h3>
+
+<pre><code>print(np.random.randn(3))</code></pre>
+
+<div class="output">
+[-0.45  1.32  0.78]
+</div>
+
+<h3>🔹 random()</h3>
+
+<pre><code>print(np.random.random(4))</code></pre>
+
+<div class="output">
+[0.23 0.89 0.45 0.67]
+</div>
+
+<hr>
+
+<h2>📊 Statistical Functions</h2>
+
+<pre><code>a = np.array([10, 20, 5])</code></pre>
+
+<div class="output">
+max → 20  
+min → 5  
+sum → 35  
+argmax → 1  
+argmin → 2
+</div>
+
+<hr>
+
+<h2>✖️ Matrix Multiplication</h2>
+
+<pre><code>a = np.array([[1,2],[3,4]])
+b = np.array([[5,6],[7,8]])
+
+print(np.matmul(a,b))</code></pre>
+
+<div class="output">
+[[19 22]
+ [43 50]]
+</div>
+
+<hr>
+
+<h2>🌟 End</h2>
+<p>✔ Perfect for beginners, exams, and interviews<br>
+✔ Useful for Data Science, ML, and AI</p>
+
+</body>
+</html>
