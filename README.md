@@ -1,42 +1,5 @@
 # Python-Libraries
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>NumPy Python Library Notes</title>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-        background-color: #f9f9f9;
-        padding: 20px;
-        color: #333;
-    }
-    h1, h2, h3 {
-        color: #2c3e50;
-    }
-    code, pre {
-        background: #272822;
-        color: #f8f8f2;
-        padding: 10px;
-        display: block;
-        border-radius: 5px;
-        overflow-x: auto;
-    }
-    .output {
-        background: #ecf0f1;
-        color: #000;
-        padding: 10px;
-        border-left: 5px solid #2ecc71;
-        margin-bottom: 20px;
-        white-space: pre;
-    }
-</style>
-</head>
-
-<body>
-
 <h1>📦 NumPy (Numerical Python)</h1>
 <p><b>NumPy</b> is a Python library used for numerical computing and multi-dimensional arrays.</p>
 
@@ -265,11 +228,3 @@ print(np.matmul(a,b))</code></pre>
  [43 50]]
 </div>
 
-<hr>
-
-<h2>🌟 End</h2>
-<p>✔ Perfect for beginners, exams, and interviews<br>
-✔ Useful for Data Science, ML, and AI</p>
-
-</body>
-</html>
