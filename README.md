@@ -227,4 +227,101 @@ print(np.matmul(a,b))</code></pre>
 [[19 22]
  [43 50]]
 </div>
+<pre><code>a = np.array([10, 20, 5])</code></pre>
+
+<h3>🔹 max()</h3>
+<pre><code>print(a.max())</code></pre>
+<div class="output">20</div>
+
+<h3>🔹 min()</h3>
+<pre><code>print(a.min())</code></pre>
+<div class="output">5</div>
+
+<h3>🔹 sum()</h3>
+<pre><code>print(a.sum())</code></pre>
+<div class="output">35</div>
+
+<h3>🔹 argmax()</h3>
+<pre><code>print(a.argmax())</code></pre>
+<div class="output">1</div>
+
+<h3>🔹 argmin()</h3>
+<pre><code>print(a.argmin())</code></pre>
+<div class="output">2</div>
+
+<hr>
+
+<h2>🔁 repeat()</h2>
+
+<pre><code>a = np.array([1, 2, 3])
+print(np.repeat(a, 2))</code></pre>
+
+<div class="output">
+[1 1 2 2 3 3]
+</div>
+
+<hr>
+
+<h2>🧭 Axis Operations</h2>
+
+<pre><code>a = np.array([[1, 2],
+              [3, 4]])</code></pre>
+
+<h3>🔹 axis = 0 (Column-wise)</h3>
+
+<pre><code>print(a.sum(axis=0))</code></pre>
+
+<div class="output">
+[4 6]
+</div>
+
+<h3>🔹 axis = 1 (Row-wise)</h3>
+
+<pre><code>print(a.sum(axis=1))</code></pre>
+
+<div class="output">
+[3 7]
+</div>
+
+<hr>
+
+<h2>➕ Arithmetic Operations</h2>
+
+<h3>🔹 add()</h3>
+
+<pre><code>a = np.array([1, 2])
+b = np.array([3, 4])
+
+print(np.add(a, b))</code></pre>
+
+<div class="output">
+[4 6]
+</div>
+
+<hr>
+
+<h2>🧮 Math Functions</h2>
+
+<pre><code>a = np.array([1, 4, 9])</code></pre>
+
+<h3>🔹 sqrt()</h3>
+<pre><code>print(np.sqrt(a))</code></pre>
+<div class="output">
+[1. 2. 3.]
+</div>
+
+<h3>🔹 log()</h3>
+<pre><code>print(np.log(a))</code></pre>
+<div class="output">
+[0.         1.38629436 2.19722458]
+</div>
+
+<h3>🔹 exp()</h3>
+<pre><code>print(np.exp(a))</code></pre>
+<div class="output">
+[2.71828183 54.59815003 8103.08392758]
+</div>
+
+
+
 
