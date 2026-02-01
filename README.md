@@ -566,6 +566,152 @@ df.columns
 </code></pre>
 
 <hr>
+<div align="center">
+
+<h1>📊 Matplotlib</h1>
+
+<p><b>Definitions, Examples, Graph Styles & Icons</b></p>
+
+</div>
+
+<hr>
+
+<h2>📌 1. Matplotlib (Definition)</h2>
+<p>
+<b>Matplotlib</b> is a Python library used for <b>data visualization</b>.
+It helps in creating graphs such as line charts, bar charts, histograms,
+pie charts, and scatter plots.
+</p>
+
+<pre><code>import matplotlib.pyplot as plt</code></pre>
+
+<hr>
+
+<h2>⚙️ 2. Built-in Functions</h2>
+
+<p>Matplotlib provides many built-in functions to create and customize graphs.</p>
+
+<table border="1" cellpadding="8">
+<tr>
+<th>Function</th>
+<th>Purpose</th>
+</tr>
+<tr><td>plt.plot()</td><td>Line Chart</td></tr>
+<tr><td>plt.scatter()</td><td>Scatter Plot</td></tr>
+<tr><td>plt.bar()</td><td>Bar Chart</td></tr>
+<tr><td>plt.hist()</td><td>Histogram</td></tr>
+<tr><td>plt.pie()</td><td>Pie Chart</td></tr>
+<tr><td>plt.legend()</td><td>Legend</td></tr>
+<tr><td>plt.show()</td><td>Display Graph</td></tr>
+</table>
+
+<hr>
+
+<h2>⭐ 3. Scatter Plot</h2>
+<p>
+A <b>scatter plot</b> shows the relationship between two numerical values
+using dots or icons.
+</p>
+
+<pre><code>
+plt.scatter(x, y, color='red', marker='*', s=150)
+plt.show()
+</code></pre>
+
+<p>🔹 Markers / Icons: <code>o</code>, <code>*</code>, <code>^</code>, <code>s</code>, <code>D</code></p>
+
+<hr>
+
+<h2>📈 4. Line Chart</h2>
+<p>
+A <b>line chart</b> displays data points connected by straight lines,
+mostly used to show trends.
+</p>
+
+<pre><code>
+plt.plot(x, y, color='blue', linestyle='--', marker='o')
+plt.show()
+</code></pre>
+
+<p>🔹 Line styles: <code>-</code>, <code>--</code>, <code>:</code>, <code>-.</code></p>
+
+<hr>
+
+<h2>🧾 5. Legend</h2>
+<p>
+A <b>legend</b> explains the colors, markers, or lines used in a graph.
+</p>
+
+<pre><code>
+plt.plot(x, y, label="Line A")
+plt.legend()
+plt.show()
+</code></pre>
+
+<hr>
+
+<h2>🧩 6. Subplots</h2>
+<p>
+<b>Subplots</b> allow multiple graphs in a single figure.
+</p>
+
+<pre><code>
+fig, ax = plt.subplots(1, 2)
+ax[0].plot(x, y)
+ax[1].bar(x, y)
+plt.show()
+</code></pre>
+
+<hr>
+
+<h2>📊 7. Histogram</h2>
+<p>
+A <b>histogram</b> represents the frequency distribution of numerical data.
+</p>
+
+<pre><code>
+plt.hist(data, bins=5, color='purple')
+plt.show()
+</code></pre>
+
+<hr>
+
+<h2>📉 8. Bar Chart</h2>
+<p>
+A <b>bar chart</b> compares values across different categories.
+</p>
+
+<pre><code>
+plt.bar(subjects, marks, color='skyblue')
+plt.show()
+</code></pre>
+
+<hr>
+
+<h2>🥧 9. Pie Chart</h2>
+<p>
+A <b>pie chart</b> shows data as parts of a whole using percentages.
+</p>
+
+<pre><code>
+plt.pie(values, labels=labels, autopct='%1.1f%%')
+plt.show()
+</code></pre>
+
+<hr>
+
+<h2>🎨 Graph Styles & Icons</h2>
+
+<ul>
+<li>🎨 Colors: red, blue, green, orange, purple</li>
+<li>🔷 Markers: o, *, ^, s, D</li>
+<li>📏 Line styles: -, --, :, -.</li>
+<li>🧭 Grid: <code>plt.grid(True)</code></li>
+</ul>
+
+<hr>
+
+
 
 
 
