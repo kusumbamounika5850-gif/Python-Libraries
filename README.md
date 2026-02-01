@@ -567,15 +567,6 @@ df.columns
 
 <hr>
 
-<h2>🌟 Why Pandas for AI?</h2>
-<ul>
-  <li>Load datasets</li>
-  <li>Clean missing data</li>
-  <li>Analyze patterns</li>
-  <li>Prepare data for ML models</li>
-</ul>
-
-<p><b>⭐ Star this repo if it helped you!</b></p>
 
 
 
