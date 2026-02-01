@@ -322,6 +322,262 @@ print(np.add(a, b))</code></pre>
 [2.71828183 54.59815003 8103.08392758]
 </div>
 
+<h1>🐼 Pandas & Built-in Functions </h1>
+
+<hr>
+
+<h2>📌 What is Pandas?</h2>
+<p>
+<b>Pandas</b> is a powerful Python library used for
+<b>data manipulation, cleaning, and analysis</b>.
+It is widely used in <b>AI, Machine Learning, and Data Science</b>.
+</p>
+
+<hr>
+
+<h2>📘 Series</h2>
+<p>A <b>one-dimensional labeled array</b> that can store numbers, strings, etc.</p>
+
+<pre><code>
+import pandas as pd
+s = pd.Series([10, 20, 30])
+print(s)
+</code></pre>
+
+<hr>
+
+<h2>📗 DataFrame</h2>
+<p>A <b>two-dimensional tabular data structure</b> with rows and columns.</p>
+
+<pre><code>
+df = pd.DataFrame({
+    "Name": ["Alice", "Bob"],
+    "Age": [25, 30]
+})
+print(df)
+</code></pre>
+
+<hr>
+
+<h2>📐 shape</h2>
+<p>Returns the number of <b>rows and columns</b>.</p>
+
+<pre><code>
+df.shape
+</code></pre>
+
+<hr>
+
+<h2>🔢 size</h2>
+<p>Returns the <b>total number of elements</b>.</p>
+
+<pre><code>
+df.size
+</code></pre>
+
+<hr>
+
+<h2>📍 loc</h2>
+<p>Access data using <b>row labels and column names</b>.</p>
+
+<pre><code>
+df.loc[0, "Name"]
+</code></pre>
+
+<hr>
+
+<h2>📍 iloc</h2>
+<p>Access data using <b>integer index positions</b>.</p>
+
+<pre><code>
+df.iloc[0, 1]
+</code></pre>
+
+<hr>
+
+<h2>✏️ rename</h2>
+<p>Used to <b>rename column or index names</b>.</p>
+
+<pre><code>
+df.rename(columns={"Age": "Years"})
+</code></pre>
+
+<hr>
+
+<h2>❌ drop</h2>
+<p>Removes rows or columns.</p>
+
+<pre><code>
+df.drop("Age", axis=1)   # drop column
+df.drop(0, axis=0)       # drop row
+</code></pre>
+
+<hr>
+
+<h2>↔️ axis = 1</h2>
+<p>Refers to <b>columns</b>.</p>
+
+<pre><code>
+df.drop("Age", axis=1)
+</code></pre>
+
+<hr>
+
+<h2>↕️ axis = 0</h2>
+<p>Refers to <b>rows</b>.</p>
+
+<pre><code>
+df.drop(0, axis=0)
+</code></pre>
+
+<hr>
+
+<h2>💾 to_csv</h2>
+<p>Saves a DataFrame to a <b>CSV file</b>.</p>
+
+<pre><code>
+df.to_csv("output.csv", index=False)
+</code></pre>
+
+<hr>
+
+<h2>📥 read_csv</h2>
+<p>Reads a CSV file and creates a DataFrame.</p>
+
+<pre><code>
+df = pd.read_csv("data.csv")
+</code></pre>
+
+<hr>
+
+<h2>👀 head()</h2>
+<p>Displays the <b>first 5 rows</b>.</p>
+
+<pre><code>
+df.head()
+</code></pre>
+
+<hr>
+
+<h2>👣 tail()</h2>
+<p>Displays the <b>last 5 rows</b>.</p>
+
+<pre><code>
+df.tail()
+</code></pre>
+
+<hr>
+
+<h2>🎲 sample()</h2>
+<p>Returns <b>random rows</b>.</p>
+
+<pre><code>
+df.sample(2)
+</code></pre>
+
+<hr>
+
+<h2>❓ isnull().sum()</h2>
+<p>Counts <b>missing (NaN) values</b> in each column.</p>
+
+<pre><code>
+df.isnull().sum()
+</code></pre>
+
+<hr>
+
+<h2>ℹ️ info()</h2>
+<p>Shows a <b>summary of the DataFrame</b>.</p>
+
+<pre><code>
+df.info()
+</code></pre>
+
+<hr>
+
+<h2>🧬 unique</h2>
+<p>Returns <b>unique values</b> in a column.</p>
+
+<pre><code>
+df["Name"].unique()
+</code></pre>
+
+<hr>
+
+<h2>🔢 value_counts</h2>
+<p>Counts the <b>frequency of values</b>.</p>
+
+<pre><code>
+df["Name"].value_counts()
+</code></pre>
+
+<hr>
+
+<h2>🎯 select_dtypes</h2>
+<p>Selects columns based on <b>data type</b>.</p>
+
+<pre><code>
+df.select_dtypes(include="number")
+</code></pre>
+
+<hr>
+
+<h2>📊 groupby</h2>
+<p>Groups data and performs <b>aggregation</b>.</p>
+
+<pre><code>
+df.groupby("Name")["Age"].mean()
+</code></pre>
+
+<hr>
+
+<h2>🧹 fillna</h2>
+<p>Fills <b>missing values</b>.</p>
+
+<pre><code>
+df.fillna(0)
+</code></pre>
+
+<hr>
+
+<h2>🗑️ dropna</h2>
+<p>Removes rows with <b>missing values</b>.</p>
+
+<pre><code>
+df.dropna()
+</code></pre>
+
+<hr>
+
+<h2>🔢 index</h2>
+<p>Returns <b>row labels</b>.</p>
+
+<pre><code>
+df.index
+</code></pre>
+
+<hr>
+
+<h2>🧾 columns</h2>
+<p>Returns <b>column names</b>.</p>
+
+<pre><code>
+df.columns
+</code></pre>
+
+<hr>
+
+<h2>🌟 Why Pandas for AI?</h2>
+<ul>
+  <li>Load datasets</li>
+  <li>Clean missing data</li>
+  <li>Analyze patterns</li>
+  <li>Prepare data for ML models</li>
+</ul>
+
+<p><b>⭐ Star this repo if it helped you!</b></p>
+
+
 
 
 
